@@ -35,6 +35,19 @@ header h1 {
 }
 
 .warning {
+    background-color:yellow;
+    margin: 8px auto;
+    font-size: 18px;
+    font-weight: bold; 
+    padding: 10px;
+    color: black;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    display: none;
+}
+
+.error {
     background-color: #ee0505;
     margin: 8px auto;
     font-size: 18px;
