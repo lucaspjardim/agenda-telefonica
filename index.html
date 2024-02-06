@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <title>Minha agenda</title>
 </head>
 <body>
@@ -12,9 +15,10 @@
             <img src="imagens/phone-book.png" alt="Emoji de uma agenda telefonica">
             <h1>Agenda telefônica</h1>
         </header>
-        <form>
-            <input type="text" required placeholder="Nome e sobrenome">
-            <input type="tel" required placeholder="Telefone">
+        <p class="warning">Este numero de telefone já existe!</p>
+        <form id="form-agenda">
+            <input id="name-contact" type="text" required placeholder="Nome e sobrenome">
+            <input id="tel-contact" type="tel" required placeholder="Telefone" min="0" max="11">
             <button type="submit">Adicionar</button>
         </form>
         <table cellspacing="0">
