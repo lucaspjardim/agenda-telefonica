@@ -1,6 +1,7 @@
 const form = document.getElementById('form-agenda')
 let lines =''
 let formIsValid = false
+let contactCount = 0
 const contacts = []
 const telNumbers = []
 
@@ -21,7 +22,7 @@ function addLines() {
     const nameContact = document.getElementById('name-contact')
     const telContact = document.getElementById('tel-contact')
     const errorM = "Por favor preencha com Nome e Sobrenome"
-    const warningM = `O numero ${telContact} já esta na sua agenda!`
+    const warningM = `O numero ${telContact.value} já esta na sua agenda!`
     
     formIsValid = nameValidation(nameContact.value)
 
@@ -44,16 +45,24 @@ function addLines() {
         }, 5000)
     } else {
 
+        telNumbers.push(parseFloat(telContact.value))
+
         let line = '<tr>'
         line += `<td>${nameContact.value}</td>`
         line += `<td>${telContact.value}</td>`
         line += '</tr>'
 
         lines += line
+        contactCount++
+        
     }
 }
 function updateLines () {
 
         const tableBody = document.querySelector('tbody')
         tableBody.innerHTML = lines
+
+        const footerCount = document.querySelector('footer')
+        footerCount.innerHTML = `Total de contatos na agenda: ${contactCount}`
+        footerCount.style.display = 'block'
 }

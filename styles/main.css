@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #ececec;
     padding: 100px;
 }
 
@@ -35,7 +35,7 @@ header h1 {
 }
 
 .warning {
-    background-color:yellow;
+    background-color:rgb(252, 252, 105);
     margin: 8px auto;
     font-size: 18px;
     font-weight: bold; 
@@ -48,7 +48,7 @@ header h1 {
 }
 
 .error {
-    background-color: #ee0505;
+    background-color: #f25050;
     margin: 8px auto;
     font-size: 18px;
     font-weight: bold; 
@@ -76,8 +76,9 @@ form input {
 }
 
 form button {
-    background-color: green;
+    background-color: #142d4c;
     color: white;
+    text-transform: uppercase;
     font-size: 24px;
     font-weight: bold;
     border: none;
@@ -105,4 +106,15 @@ table td {
 
 table td img {
     height: 30px;
+}
+
+footer {
+    background-color: #385170;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 960px;
+    display: none;
 }
